@@ -1,0 +1,49 @@
+Primary actor : User 
+
+Secondary Actor : Dice Game. 
+
+Description : Every user is required to choose the dice faces’ number 
+
+Then, Roll the dice until user clicks stop and accomulate the results from each roll he mades. The user is required to choose between dice 6 that has 6 faces each face carry number between 1 to 6. 
+
+Or dice 12 that has 12 faces each face carry number between 1 to 12 
+
+ 
+
+Expected Flow dice 6 : 
+
+1. User lands on home page. 
+
+2. User clicks on chosen dice 
+
+3. User clicks on Roll. 
+
+4. Dice keeps turned . 
+
+5. User clicks Stop botton. 
+
+6. The dice will stop  with face has number from 1 to 6. 
+
+7. The user writes the result. 
+
+8. User can repeat the previous steps. 
+
+ 
+
+Alternative Flow dice12 : 
+
+1. User lands on home page. 
+
+2. User clicks on chosen dice  
+
+3. User clicks on Roll. 
+
+4. Dice keeps turned . 
+
+5. User clicks Stop button. 
+
+6. The dice will stop  with face has number from 1 to 12. 
+
+7. The user writes the result. 
+
+8. User can repeat the previous steps. 

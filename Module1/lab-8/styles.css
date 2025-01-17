@@ -1,0 +1,17 @@
+h1 {
+font-family: sans-serif;
+color:rgb(233, 105, 20);
+font-size: 100%;
+}
+body{
+font-feature-settings: "abvs";
+font-style: oblique;
+color: rgb(149, 245, 151);
+
+}
+.secstyle{
+    display: block;
+    background-color:rgb(85, 110, 239);
+    
+        
+}
