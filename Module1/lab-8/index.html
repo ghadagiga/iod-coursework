@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>Dice Game</p>
+  <div class="container">
+    <select id="dropdown">
+      <option value="null"> choose the dice</option>
+    <option id="dice10", type="radio" value="10">dice10</option>
+    <option  id="dice12" value="12">dice12</option>
+  </select>
+
+
+  <button onclick="rolldice()">Roll Dice</button>
+
+<img id="diceImage" width="500" height="333"/>
+
+  </div>
+  <script>
+
+  let dropdownElement = document.getElementById("dropdown");
+  let currentValue;
+
+  // Step 1: We want to get the value of the selected die
+    dropdownElement.addEventListener('change', function(){
+      console.log(dropdownElement.value)
+      currentValue = dropdownElement.value
+    })
+
+
+// Step 2: We want the img element to update with the appropriate image for the selected value
+
+
+  // rolldice(e)
+  function rolldice(){
+    let currentValue = dropdownElement.value;
+   
+    if(currentValue === "10"){
+   
+      let imageElement = document.getElementById("diceImage");
+      imageElement.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-dFzgJENv3g1NFPkSyXFSNWdCtzxCiOtfzg&s"
+   
+    }
+
+    if (currentValue === "12"){
+// Update this code here to be similar to the block above
+
+    
+
+      let imageElement = document.getElementById("diceImage");
+      imageElement.src ="https://cdn11.bigcommerce.com/s-wtulnkmvw7/images/stencil/1280x1280/products/10923/49668/Giant-Foam-Polyhedra-Dice-12-Sided-Die-4-x-4-x-4-160012_13192__53472.1716578555.jpg?c=1"
+    }  
+  }
+        </script>
+    
+
+
+    </body>
+    </html>
