@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Demonstration</title>
+<style>
+#logo,#boxes {
+    display: flex; 
+    border-color: black; 
+}
+.circle{
+    width: 100px; /* Adjust as needed */
+
+  height: 100px; /* Adjust as needed */
+
+  border-radius: 50%;
+
+  background-color: blue;
+  
+}
+ul{
+    display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-content: space-evenly;
+margin-top: -100px;
+border-color: black;
+background-color: black;
+
+}
+        ul li {
+  padding: 40px;
+  margin: 0 10px;
+}
+.items {
+    width: 300px; /* Adjust as needed */
+
+height: 200px; /* Adjust as needed */
+
+border-radius: 20%;
+margin: 30px;
+
+background-color: rgba(103, 103, 109, 0.589);
+}      
+</style>
+</head>
+<body>
+ <!-- flex container #1 -->
+<div id="logo" style="background-color:"transparent";>
+<div class="circle"> </div></div>
+<!-- flex container #2-->
+<div id="main-menu">
+<ul style="background-color: "transparent";>
+<li><a href="#">Menu1</a></li><li><a href="#">Menu2</a></li><li><a href="#">Menu3</a></li>
+</ul></div>
+<!-- flex container #3 -->
+<div id="boxes"> 
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+</div>
+</body>
+</html>

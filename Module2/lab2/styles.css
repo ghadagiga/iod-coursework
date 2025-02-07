@@ -1,0 +1,13 @@
+#boxes {
+    display: flex;
+    flex-direction: row ;
+justify-content: flex-start;
+background-color: blue;
+size: 200px;
+    
+}
+.hdr2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
