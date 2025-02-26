@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #e3f2fd;
+}
+.card {
+padding: 10px;
+border:40px;
+outline-color: #205275;
+outline-width: 20px;
+}
+.card-title {
+font-weight: 600;
+font-size: 3em;
+padding: 0 0 10px 0;
+}
+.card-description {
+font-weight: 400;
+font-size: 15px;
+}
+</style>
+</head>
+<body>
+    <template id="card-template">
+        <div class="card">
+            <div class="card-title"></div>
+            <div class="artist-portfolio-title1" style="font-size: 25px;"></div>
+            <img class="card-image1" style="height: 20%; width: 20%;" /> 
+            <div class="artist-portfolio-title2"style="font-size: 25px"></div>
+            <img class="card-image2" style="height: 20%; width: 20%;" /> 
+
+        </div>
+    </template>
+    
+    <div id="card-list"></div>
+<script>
+    function addCard(artist) {
+    // clone the template
+    const template = document.getElementById("card-template").content.cloneNode(true);
+    // populate the template
+    template.querySelector('.card-title').innerText =artist.name;
+    template.querySelector('.artist-portfolio-title1').innerText=artist.portfolio[0].title;
+    template.querySelector('.card-image1').src=artist.portfolio[0].url;
+    template.querySelector('.artist-portfolio-title2').innerText=artist.portfolio[1].title;
+    template.querySelector('.card-image2').src=artist.portfolio[1].url;
+    // include the populated template into the page
+
+    console.log({template})
+    document.querySelector('#card-list')
+    .appendChild(template);
+    }
+    const artist = {
+    name: 'Van Gogh',
+    portfolio:[
+    {title: 'portrait', url:
+    'https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image'},
+    {title: 'sky', url:
+    'https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg',
+    } ,{title:'Ghandey', url:''}
+    ],
+    };
+    addCard(artist);
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.sliderr{
+width: 100px;
+height: 100px;
+background-color: blue;
+left: 45%;
+position: absolute;
+animation: sliding 3s ease-in-out infinite ;
+transform: translateX(-50%);
+animation-delay:  1s;
+
+}
+@keyframes sliding{
+0%{transform:translateY(0px);background-color: red;}
+50%{transform:translateY(100px);background-color:blue;}
+100%{transform:translateY(0px) ;background-color:red;}
+}

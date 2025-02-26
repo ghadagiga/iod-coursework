@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<title>Luxon DateTime Formatting</title>
+<script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script> 
+<!-- reference Luxon library  -->
+</head>
+<body>
+<h2>Luxon Date</h2> 
+<!-- container for Luxon output -->
+<div id="luxondate"></div>
+<script>
+    // 1. Calculate the number of days between your birthdate and the current date
+    const DateTime = luxon.DateTime;
+    let nowLuxon = DateTime.now();
+    let output=document.getElementById("luxondate");
+    output.textContent=nowLuxon;
+    document.write(output.textContent);
+    let end = DateTime.fromISO('2025-02-20');
+    let start = DateTime.fromISO('1979-12-06');
+    let diffInDays = end.diff(start, 'days').values.days;
+    console.log('diffInDays: ', diffInDays.toString);
+    let diffInMonths = end.diff(start, 'months').values.months;
+    console.log('diffInMonths: ', diffInMonths.toString());
+    let diffInYears = end.diff(start, 'years').values.years;
+    console.log('diffInYears: ', diffInYears.toString());
+    console.log('Your old complete:', diffInYears ,diffInMonths,diffInDays);
+    
+    
+    // 2. Display the number of years, months, and days between your birthdate and the current date
+    
+    const { DateTime } = require('luxon');
+    
+    // Replace with your birthdate
+    const birthdate = DateTime.fromISO('1990-01-15'); 
+    const today = DateTime.local(); 
+    
+    const diff = today.diff(birthdate); 
+    
+    console.log(`You are ${diff.years} years, ${diff.months} months, and ${diff.days} days old.`);
+    // 3. ..
+    let startDate = DateTime.fromISO(startDate)
+    let someDate = DateTime.fromISO(someDate)
+    startDate.startOf("day") <= someDate.startOf("day")
+    
+    // 4...
+    
+    
+    // 5...
+    </script>
+</body>
+</html>

@@ -14,3 +14,4 @@ console.log("Division="+division);
 console.log("Subtraction="+subtraction);
 console.log("is three less than four: "+lessThan1);
 console.log("is thirty less than four: "+lessThan2);
+<!--the number value of t letter in thirty word is more than the value of f in four word -->

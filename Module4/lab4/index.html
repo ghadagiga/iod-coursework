@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Slider</title>
+  <style>
+    .slider {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: slide 2s ease-in-out infinite;
+    }
+    
+    @keyframes slide {
+      0% { transform: translateY(0); background-color: blue; }
+      50% { transform: translateY(100px); background-color: red; }
+      100% { transform: translateY(0); background-color: blue; }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider"></div>
+</body>
+</html>
