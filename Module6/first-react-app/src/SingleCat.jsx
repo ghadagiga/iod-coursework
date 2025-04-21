@@ -1,8 +1,6 @@
 import React from "react";
-import BigCats from "./BigCats.jsx";
-import handleDeleteCat from "./BigCats.jsx";
 
-const SingleCat = ({ id, name, latinName, image }) => {
+const SingleCat = ({ id, name, latinName, image, handleDeleteCat }) => {
   return (
     <div className="cat">
       <h3>{name}</h3>

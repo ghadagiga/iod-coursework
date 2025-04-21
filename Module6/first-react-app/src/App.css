@@ -40,3 +40,29 @@
 .read-the-docs {
   color: #888;
 }
+.panel {
+  width: 300px;
+  background-color: #888;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: (3);
+  /* Creates responsive columns */
+  grid-gap: 10px; /* Adds spacing between buttons */
+  padding: 10px;
+}
+/* button {
+  padding: 0%;
+  margin: 2px;
+  color: gray;
+} */
+
+.screen {
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 300px;
+  background-color: rgb(9, 52, 91);
+}

@@ -10,6 +10,8 @@ import { cats } from "./BigCats";
 import MoodChanger from "./Emoji";
 import LoginForm from "./LoginForm";
 import { BitcoinRates } from "./BitCoinRates";
+import { Calculator } from "./Panel";
+
 function App() {
   return (
     <>
@@ -17,7 +19,8 @@ function App() {
       {/* <Comment {...comment} /> */}
       {/* <MoodChanger /> */}
       {/* <LoginForm /> */}
-      <BitcoinRates />
+      {/* <BitcoinRates /> */}
+      <Calculator />
     </>
   );
 }

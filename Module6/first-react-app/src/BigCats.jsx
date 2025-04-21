@@ -53,10 +53,11 @@ export const cats = [
       "https://media.newyorker.com/photos/59095c67ebe912338a37455d/master/w_1600,c_limit/Stokes-Hello-Kitty2.jpg",
   },
 ];
+
 function BigCats() {
   const [catsList, setCatsList] = useState(cats);
 
-  const handleDeleteCat = (Index) => {
+  const handleDeleteCat = (Index) => () => {
     const AfterDeleteCatList = catsList.filter((cat) => cat.id !== Index);
     // unreliable but succinct
     setCatsList([...AfterDeleteCatList]);
@@ -105,6 +106,7 @@ function BigCats() {
               name={cat.name}
               latinName={cat.latinName}
               image={cat.image}
+              handleDeleteCat={handleDeleteCat}
             />
           </li>
         ))}
