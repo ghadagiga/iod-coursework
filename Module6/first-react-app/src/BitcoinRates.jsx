@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
+import { useMood } from "./Emoji2";
 const currencies = ["USD", "AUD", "NZD", "GBP", "EUR", "SGD"];
 export function BitcoinRates() {
   const [currency, setCurrency] = useState(currencies[0]);
+  const [bitcoinPrice, setBitcoinPrice] = useState();
+  const { mood, pressMood } = useMood();
 
   useEffect(() => {
-    console.log("running effect");
-    let ignore = false;
     const url = fetch(
       `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`
     )
-      .then((response) => response.json())
-      .then((json) => console.log({ json }));
-    // .then((json)=> {
-    //   const key =currency.toLowerCase();
-    //   const price=json.bitcoin{key};
+      .then((Response) => Response.json())
+      .then((json) => {
+        const key = currency.toLowerCase();
+        const price = json.bitcoin[key];
+        setBitcoinPrice(price);
+      });
   }, [currency]);
 
   const options = currencies.map((curr) => (
@@ -30,6 +32,10 @@ export function BitcoinRates() {
           {options}
         </select>
       </label>
+      <p>Current Bitcoin Price for {currency} is</p>
+      <p>{bitcoinPrice}</p>
+      <p>Market Mood is {mood}</p>
+      <button onClick={pressMood}>Change Mood</button>
     </div>
   );
 }

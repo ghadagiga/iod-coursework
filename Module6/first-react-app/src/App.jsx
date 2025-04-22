@@ -19,8 +19,8 @@ function App() {
       {/* <Comment {...comment} /> */}
       {/* <MoodChanger /> */}
       {/* <LoginForm /> */}
-      {/* <BitcoinRates /> */}
-      <Calculator />
+      <BitcoinRates />
+      {/* <Calculator /> */}
     </>
   );
 }
