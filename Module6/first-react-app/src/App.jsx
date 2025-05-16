@@ -9,9 +9,11 @@ import SingleCat from "./SingleCat";
 import { cats } from "./BigCats";
 import MoodChanger from "./Emoji";
 import LoginForm from "./LoginForm";
-import { BitcoinRates } from "./BitCoinRates";
+import { BitcoinRates } from "./BitcoinRates";
 import { Calculator } from "./Panel";
-
+import { MoodProvider } from "./Emoji2.jsx";
+import { AppRoutes } from "./AppRoutes.jsx";
+import NavBar from "./Navbar.jsx";
 function App() {
   return (
     <>
@@ -19,7 +21,11 @@ function App() {
       {/* <Comment {...comment} /> */}
       {/* <MoodChanger /> */}
       {/* <LoginForm /> */}
-      <BitcoinRates />
+      <MoodProvider>
+        {/* <BitcoinRates /> */}
+        <NavBar />
+        <AppRoutes />
+      </MoodProvider>
       {/* <Calculator /> */}
     </>
   );
