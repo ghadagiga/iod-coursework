@@ -1,0 +1,100 @@
+/* Center page container and increase max width */
+#root {
+  max-width: 800px; /* wider for better content space */
+  margin: 0 auto; /* center horizontally */
+  padding: 1.5rem 2rem;
+  text-align: center;
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* menu top, footer bottom */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Boxes container */
+.showboxes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* wrap if small screen */
+}
+
+/* Individual card styling */
+.card-box {
+  width: 140px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.card-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Menu bar styling */
+.menu {
+  display: flex;
+  justify-content: center; /* center menu items */
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem 0 2rem;
+  padding: 0 1rem;
+  background-color: rgb(48, 113, 170);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.menu > div {
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+.menu > div:hover {
+  background-color: rgb(30, 80, 130);
+}
+
+/* Footer styling */
+.footer {
+  margin-top: auto; /* pushes footer to bottom */
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+}
+
+/* Ensure full height on html and body */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #root {
+    max-width: 95%;
+    padding: 1rem;
+  }
+  .card-box {
+    width: 30px;
+    padding: 0.2rem;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
